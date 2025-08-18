@@ -211,7 +211,7 @@ export default function ProductDetailPage({ params }) {
                 src={product.images[selectedImage] || "/placeholder.svg"}
                 alt={product.name}
                 fill
-                className="object-cover"
+                className="object-contain"
               />
             </div>
             <div className="grid grid-cols-4 gap-4">
@@ -227,7 +227,7 @@ export default function ProductDetailPage({ params }) {
                     src={image || "/placeholder.svg"}
                     alt={`${product.name} view ${index + 1}`}
                     fill
-                    className="object-cover"
+                    className="object-contain"
                   />
                 </button>
               ))}
@@ -255,9 +255,9 @@ export default function ProductDetailPage({ params }) {
               </div>
 
               <div className="flex items-center gap-4 mb-6">
-                <span className="text-3xl font-bold text-blue-600">NPR {product.price}</span>
+                <span className="text-3xl font-bold text-blue-600">रु{product.price}</span>
                 {product.originalPrice && (
-                  <span className="text-xl text-gray-400 line-through">NPR {product.originalPrice}</span>
+                  <span className="text-xl text-gray-400 line-through">रु{product.originalPrice}</span>
                 )}
               </div>
 
@@ -296,7 +296,7 @@ export default function ProductDetailPage({ params }) {
                   disabled={!product.inStock || addingToCart}
                 >
                   <ShoppingCart className="w-5 h-5 mr-2" />
-                  {addingToCart ? 'Adding...' : `Add to Cart - NPR ${(product.price * quantity).toFixed(2)}`}
+                  {addingToCart ? 'Adding...' : `Add to Cart - रु${(product.price * quantity).toFixed(2)}`}
                 </Button>
                 <Button size="lg" variant="outline">
                   <Heart className="w-5 h-5" />

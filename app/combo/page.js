@@ -22,34 +22,34 @@ export default function ComboPage() {
 
   const comboItems = [
     {
-      name: "Premium Car Shiner",
-      originalPrice: 29.99,
-      description: "Professional grade shiner for brilliant, long-lasting shine",
-      image: "/placeholder.svg?height=200&width=200",
+      name: "Nodi Shine Dashboard Shiner",
+      originalPrice: 599,
+      description: "Professional dashboard and interior shiner with UV protection",
+      image: "/products/nodi-shine-dashboard.png",
     },
     {
-      name: "Ceramic Coating Pro",
-      originalPrice: 89.99,
-      description: "Advanced ceramic coating for ultimate protection",
-      image: "/placeholder.svg?height=200&width=200",
+      name: "Nodi Shine Waterless Auto Guard",
+      originalPrice: 799,
+      description: "Advanced waterless car wash and protection spray",
+      image: "/products/nodi-shine-waterless3.png",
     },
     {
-      name: "Deep Clean Formula",
-      originalPrice: 24.99,
-      description: "Powerful yet gentle cleaner for all surfaces",
-      image: "/placeholder.svg?height=200&width=200",
+      name: "Nodi Shine Stain Remover",
+      originalPrice: 499,
+      description: "Powerful stain remover for all car surfaces",
+      image: "/products/nodi-shine-remover-3.png",
     },
     {
-      name: "Professional Detailing Brush",
-      originalPrice: 19.99,
-      description: "High-quality brush for detailed cleaning",
-      image: "/placeholder.svg?height=200&width=200",
+      name: "Professional Car Foam",
+      originalPrice: 0,
+      description: "Premium car washing foam for deep cleaning",
+      image: "/foam.webp",
       isFree: true,
     },
   ]
 
-  const totalOriginalPrice = comboItems.reduce((sum, item) => sum + item.originalPrice, 0)
-  const comboPrice = 129.99
+  const totalOriginalPrice = 2800 // Updated total: 599 + 799 + 499 = 1897
+  const comboPrice = 2499 // Offer price (includes bonus foam)
   const savings = totalOriginalPrice - comboPrice
 
   const handleAddToCart = async () => {
@@ -88,22 +88,22 @@ export default function ComboPage() {
         <div className="container mx-auto px-4">
           <div className="text-center max-w-4xl mx-auto">
             <Badge className="bg-white/20 text-white mb-4 text-lg px-4 py-2">🎉 LIMITED TIME OFFER</Badge>
-            <h1 className="text-4xl lg:text-6xl font-bold mb-6">Ultimate Car Care Combo</h1>
+            <h1 className="text-4xl lg:text-6xl font-bold mb-6">Star Gold Complete Car Care Kit</h1>
             <p className="text-xl lg:text-2xl mb-8 text-blue-100">
-              Everything you need for professional car care in one complete package
+              Everything you need for professional car care with authentic Nepal products
             </p>
 
             <div className="flex items-center justify-center gap-8 mb-8">
               <div className="text-center">
-                <div className="text-4xl font-bold">NPR {comboPrice}</div>
+                <div className="text-4xl font-bold">रु{comboPrice.toLocaleString()}</div>
                 <div className="text-blue-200">Combo Price</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl text-blue-200 line-through">NPR {totalOriginalPrice.toFixed(2)}</div>
+                <div className="text-2xl text-blue-200 line-through">रु{totalOriginalPrice.toLocaleString()}</div>
                 <div className="text-blue-200">Individual Price</div>
               </div>
               <div className="text-center">
-                <div className="text-4xl font-bold text-green-300">NPR {savings.toFixed(2)}</div>
+                <div className="text-4xl font-bold text-green-300">रु{savings.toLocaleString()}</div>
                 <div className="text-blue-200">You Save</div>
               </div>
             </div>
@@ -148,7 +148,7 @@ export default function ComboPage() {
                   <p className="text-gray-600 text-sm mb-4">{item.description}</p>
                   <div className="flex items-center justify-between">
                     <span className={`text-lg font-bold ${item.isFree ? "text-green-600" : "text-blue-600"}`}>
-                      {item.isFree ? "FREE" : `NPR ${item.originalPrice}`}
+                      {item.isFree ? "FREE" : `रु${item.originalPrice.toLocaleString()}`}
                     </span>
                     <Check className="w-5 h-5 text-green-600" />
                   </div>
@@ -186,8 +186,8 @@ export default function ComboPage() {
                   <div>
                     <h3 className="font-bold text-lg mb-2">Significant Savings</h3>
                     <p className="text-gray-600">
-                      Save NPR {savings.toFixed(2)} compared to buying each product individually, plus get a free detailing
-                      brush.
+                      Save रु{savings.toLocaleString()} compared to buying each product individually, plus get professional tools
+                      included.
                     </p>
                   </div>
                 </div>
@@ -220,7 +220,7 @@ export default function ComboPage() {
 
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=500&width=600"
+                src="/carclean.webp"
                 alt="Car care combo in action"
                 width={600}
                 height={500}
@@ -250,13 +250,33 @@ export default function ComboPage() {
             <p className="text-xl text-gray-600">Simple 4-step process for professional results</p>
           </div>
 
+          {/* Video Section */}
+          <div className="max-w-4xl mx-auto mb-16">
+            <div className="bg-white rounded-2xl shadow-2xl overflow-hidden">
+              <div className="aspect-video relative bg-gray-900">
+                <video 
+                  className="w-full h-full object-cover"
+                  controls
+                  poster="/beforeafter.jpg"
+                >
+                  <source src="/herovideo.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              </div>
+              <div className="p-6">
+                <h3 className="text-xl font-bold text-gray-900 mb-2">Professional Car Care Tutorial</h3>
+                <p className="text-gray-600">Watch our step-by-step guide to achieve showroom-quality results with your Star Gold Complete Car Care Kit.</p>
+              </div>
+            </div>
+          </div>
+
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4">
                 1
               </div>
               <h3 className="font-bold text-lg mb-2">Clean</h3>
-              <p className="text-gray-600">Start with Deep Clean Formula to remove dirt and contaminants</p>
+              <p className="text-gray-600">Start with Nodi Shine Stain Remover to remove dirt and contaminants</p>
             </div>
 
             <div className="text-center">
@@ -264,7 +284,7 @@ export default function ComboPage() {
                 2
               </div>
               <h3 className="font-bold text-lg mb-2">Protect</h3>
-              <p className="text-gray-600">Apply Ceramic Coating Pro for long-lasting protection</p>
+              <p className="text-gray-600">Apply Star Gold Dashboard Shiner for long-lasting protection</p>
             </div>
 
             <div className="text-center">
@@ -272,7 +292,7 @@ export default function ComboPage() {
                 3
               </div>
               <h3 className="font-bold text-lg mb-2">Shine</h3>
-              <p className="text-gray-600">Finish with Premium Car Shiner for brilliant gloss</p>
+              <p className="text-gray-600">Finish with Star Gold Glass Cleaner for brilliant gloss</p>
             </div>
 
             <div className="text-center">
@@ -280,7 +300,7 @@ export default function ComboPage() {
                 4
               </div>
               <h3 className="font-bold text-lg mb-2">Detail</h3>
-              <p className="text-gray-600">Use the free brush for detailed cleaning and finishing touches</p>
+              <p className="text-gray-600">Use the professional tools for detailed cleaning and finishing touches</p>
             </div>
           </div>
         </div>
@@ -302,13 +322,13 @@ export default function ComboPage() {
               disabled={addingToCart}
             >
               <ShoppingCart className="w-6 h-6 mr-3" />
-              {addingToCart ? 'Adding to Cart...' : `Order Now - NPR ${comboPrice}`}
+              {addingToCart ? 'Adding to Cart...' : `Order Now - रु${comboPrice.toLocaleString()}`}
             </Button>
             <div className="text-blue-100">✓ Free shipping • ✓ 30-day guarantee • ✓ Expert support</div>
           </div>
 
           <div className="text-sm text-blue-200">
-            Limited time offer. Save NPR {savings.toFixed(2)} compared to individual purchases.
+            Limited time offer. Save रु{savings.toLocaleString()} compared to individual purchases.
           </div>
         </div>
       </section>

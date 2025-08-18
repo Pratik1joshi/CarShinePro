@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Mail, Phone, MapPin } from "lucide-react"
+import { Facebook, Instagram, Phone, MessageCircle } from "lucide-react"
 
 export default function Footer() {
   return (
@@ -21,12 +21,22 @@ export default function Footer() {
               Premium car care products for professional results. Trusted by car enthusiasts and professionals worldwide.
             </p>
             <div className="flex space-x-4">
-              <div className="p-3 bg-white/10 rounded-xl hover:bg-white/20 transition-colors cursor-pointer">
+              <a 
+                href="https://www.facebook.com/share/1F9zAFzGGV/" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 bg-white/10 rounded-xl hover:bg-white/20 transition-colors cursor-pointer"
+              >
                 <Facebook className="w-6 h-6 text-blue-400" />
-              </div>
-              <div className="p-3 bg-white/10 rounded-xl hover:bg-white/20 transition-colors cursor-pointer">
-                <Twitter className="w-6 h-6 text-blue-400" />
-              </div>
+              </a>
+              <a 
+                href="https://wa.me/9779705387432" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="p-3 bg-white/10 rounded-xl hover:bg-white/20 transition-colors cursor-pointer"
+              >
+                <MessageCircle className="w-6 h-6 text-green-400" />
+              </a>
               <div className="p-3 bg-white/10 rounded-xl hover:bg-white/20 transition-colors cursor-pointer">
                 <Instagram className="w-6 h-6 text-pink-400" />
               </div>
@@ -56,24 +66,17 @@ export default function Footer() {
           <div className="space-y-6">
             <h3 className="text-xl font-bold text-white">Contact Us</h3>
             <div className="space-y-4">
-              <div className="flex items-center space-x-4 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                <div className="p-2 bg-blue-500/20 rounded-lg">
-                  <Phone className="w-5 h-5 text-blue-400" />
+              <a 
+                href="https://wa.me/9779705387432" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="flex items-center space-x-4 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-colors group cursor-pointer"
+              >
+                <div className="p-2 bg-green-500/20 rounded-lg group-hover:bg-green-500/30 transition-colors">
+                  <Phone className="w-5 h-5 text-green-400" />
                 </div>
-                <span className="text-gray-300 text-lg">+1 (555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-4 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                <div className="p-2 bg-green-500/20 rounded-lg">
-                  <Mail className="w-5 h-5 text-green-400" />
-                </div>
-                <span className="text-gray-300 text-lg">info@carpolishpro.com</span>
-              </div>
-              <div className="flex items-center space-x-4 p-3 bg-white/5 rounded-xl hover:bg-white/10 transition-colors">
-                <div className="p-2 bg-purple-500/20 rounded-lg">
-                  <MapPin className="w-5 h-5 text-purple-400" />
-                </div>
-                <span className="text-gray-300 text-lg">123 Car Care St, Auto City, AC 12345</span>
-              </div>
+                <span className="text-gray-300 text-lg group-hover:text-green-400 transition-colors">+977 9705387432</span>
+              </a>
             </div>
           </div>
         </div>
@@ -84,13 +87,16 @@ export default function Footer() {
             <p className="text-gray-400 text-lg">
               © {new Date().getFullYear()} CarPolish Pro. All rights reserved.
             </p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-blue-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-blue-400 transition-colors">
-                Terms of Service
-              </Link>
+            <div className="flex items-center space-x-2 mt-4 md:mt-0">
+              <span className="text-gray-400">Powered by</span>
+              <a 
+                href="https://aagat.dev" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-blue-400 hover:text-blue-300 transition-colors font-medium"
+              >
+                aagat.dev
+              </a>
             </div>
           </div>
         </div>

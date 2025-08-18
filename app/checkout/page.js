@@ -50,7 +50,7 @@ export default function CheckoutPage() {
 
   const cartItems = items || []
   const subtotal = getCartTotal()
-  const deliveryCharge = 150 // NPR 150 delivery charge
+  const deliveryCharge = 150 // रु150 delivery charge
   const total = subtotal + deliveryCharge
 
   // Debug logging
@@ -250,7 +250,7 @@ export default function CheckoutPage() {
               </p>
               <div className="bg-green-50 p-4 rounded-lg mb-6">
                 <p className="text-green-800 font-medium">Your order will be delivered via Cash on Delivery (COD)</p>
-                <p className="text-green-700 text-sm mt-1">Total Amount: NPR {total.toFixed(2)}</p>
+                <p className="text-green-700 text-sm mt-1">Total Amount: रु{total.toFixed(2)}</p>
               </div>
               <div className="flex gap-4 justify-center">
                 <Button asChild>
@@ -551,7 +551,7 @@ export default function CheckoutPage() {
                           <p className="text-gray-600 text-sm">Qty: {item.quantity}</p>
                         </div>
                         <div className="text-right">
-                          <p className="font-semibold">NPR {(item.product_price * item.quantity).toFixed(2)}</p>
+                          <p className="font-semibold">रु{(item.product_price * item.quantity).toFixed(2)}</p>
                         </div>
                       </div>
                     ))}
@@ -560,18 +560,18 @@ export default function CheckoutPage() {
                   <div className="border-t pt-4 space-y-2">
                     <div className="flex justify-between">
                       <span className="text-gray-600">Subtotal</span>
-                      <span className="font-semibold">NPR {subtotal.toFixed(2)}</span>
+                      <span className="font-semibold">रु{subtotal.toFixed(2)}</span>
                     </div>
 
                     <div className="flex justify-between">
                       <span className="text-gray-600">Delivery Charge</span>
-                      <span className="font-semibold">NPR {deliveryCharge}</span>
+                      <span className="font-semibold">रु{deliveryCharge}</span>
                     </div>
 
                     <div className="border-t pt-2">
                       <div className="flex justify-between text-lg font-bold">
                         <span>Total</span>
-                        <span>NPR {total.toFixed(2)}</span>
+                        <span>रु{total.toFixed(2)}</span>
                       </div>
                     </div>
                   </div>

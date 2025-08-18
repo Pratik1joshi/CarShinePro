@@ -99,7 +99,7 @@ export default function CartPage() {
 
                       <div className="flex-1">
                         <h3 className="font-semibold text-lg text-gray-900">{item.product_name}</h3>
-                        <p className="text-blue-600 font-bold">NPR {item.product_price}</p>
+                        <p className="text-blue-600 font-bold">रु{item.product_price}</p>
                       </div>
 
                       <div className="flex items-center gap-3">
@@ -126,7 +126,7 @@ export default function CartPage() {
                         </div>
 
                         <div className="text-lg font-bold text-gray-900 min-w-[80px] text-right">
-                          NPR {(item.product_price * item.quantity).toFixed(2)}
+                          रु{(item.product_price * item.quantity).toFixed(2)}
                         </div>
 
                         <button
@@ -151,29 +151,29 @@ export default function CartPage() {
                   <div className="space-y-4">
                     <div className="flex justify-between">
                       <span className="text-gray-600">Subtotal</span>
-                      <span className="font-semibold">NPR {subtotal.toFixed(2)}</span>
+                      <span className="font-semibold">रु{subtotal.toFixed(2)}</span>
                     </div>
 
                     <div className="flex justify-between">
                       <span className="text-gray-600">Shipping</span>
-                      <span className="font-semibold">{shipping === 0 ? "FREE" : `NPR ${shipping.toFixed(2)}`}</span>
+                      <span className="font-semibold">{shipping === 0 ? "FREE" : `रु${shipping.toFixed(2)}`}</span>
                     </div>
 
                     <div className="flex justify-between">
                       <span className="text-gray-600">Tax</span>
-                      <span className="font-semibold">NPR {tax.toFixed(2)}</span>
+                      <span className="font-semibold">रु{tax.toFixed(2)}</span>
                     </div>
 
                     <div className="border-t pt-4">
                       <div className="flex justify-between text-lg font-bold">
                         <span>Total</span>
-                        <span>NPR {total.toFixed(2)}</span>
+                        <span>रु{total.toFixed(2)}</span>
                       </div>
                     </div>
 
                     {shipping > 0 && (
                       <div className="text-sm text-gray-600 bg-blue-50 p-3 rounded-lg">
-                        Add NPR {(100 - subtotal).toFixed(2)} more for free shipping!
+                        Add रु{(100 - subtotal).toFixed(2)} more for free shipping!
                       </div>
                     )}
 

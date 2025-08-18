@@ -25,7 +25,7 @@ export default function AboutPage() {
     {
       icon: Truck,
       title: "Fast Shipping",
-      description: "Free shipping on orders over NPR 100 with fast, reliable delivery to your door.",
+      description: "Free shipping on orders over रु100 with fast, reliable delivery to your door.",
     },
   ]
 

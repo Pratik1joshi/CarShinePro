@@ -9,24 +9,33 @@ export default function HomePage() {
   const products = [
     {
       id: 1,
-      name: "Premium Car Shiner",
-      price: 29.99,
-      image: "/placeholder.svg?height=250&width=250",
+      name: "Nodi Shine Dashboard Shiner",
+      description: "Professional dashboard and interior shiner with UV protection",
+      price: 599,
+      image: "/products/nodi-shine-dashboard.png",
       category: "shiner",
+      rating: 4.8,
+      reviews: 124
     },
     {
       id: 2,
-      name: "Ceramic Coating Pro",
-      price: 89.99,
-      image: "/placeholder.svg?height=250&width=250",
-      category: "coating",
+      name: "Nodi Shine Waterless Auto Guard",
+      description: "Advanced waterless car wash and protection spray",
+      price: 799,
+      image: "/products/nodi-shine-waterless3.png",
+      category: "spray",
+      rating: 4.9,
+      reviews: 89
     },
     {
       id: 3,
-      name: "Deep Clean Formula",
-      price: 24.99,
-      image: "/placeholder.svg?height=250&width=250",
+      name: "Nodi Shine Stain Remover",
+      description: "Powerful stain remover for all car surfaces",
+      price: 499,
+      image: "/products/nodi-shine-remover-3.png",
       category: "cleaner",
+      rating: 4.7,
+      reviews: 156
     },
   ]
 
@@ -50,7 +59,7 @@ export default function HomePage() {
                   </span>
                 </h1>
                 <p className="text-xl text-gray-600 leading-relaxed">
-                  Premium car polish products trusted by professionals worldwide. Get that showroom finish with our advanced
+                  Premium Nodi Shine and Star Gold car care products trusted by professionals across Nepal. Get that showroom finish with our advanced
                   formulas designed for lasting protection and brilliant shine.
                 </p>
               </div>
@@ -86,15 +95,15 @@ export default function HomePage() {
             <div className="relative lg:pl-8">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src="/products/combo5.png"
                   alt="Luxury car with perfect shine"
                   width={600}
                   height={500}
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
                 />
                 <div className="absolute -bottom-6 -left-6 bg-gradient-to-r from-blue-500 to-indigo-600 text-white p-6 rounded-xl shadow-xl">
-                  <div className="text-2xl font-bold">25% OFF</div>
-                  <div className="text-sm font-medium">Combo Package</div>
+                  <div className="text-2xl font-bold">Save रु251</div>
+                  <div className="text-sm font-medium">Star Gold Combo</div>
                 </div>
               </div>
             </div>
@@ -111,24 +120,24 @@ export default function HomePage() {
               <Badge className="bg-blue-100 backdrop-blur-sm text-blue-700 border border-blue-200 mb-4 px-4 py-2 text-lg font-semibold">
                 🎯 Limited Time Offer
               </Badge>
-              <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-gray-900">Ultimate Car Care Combo</h2>
+              <h2 className="text-3xl lg:text-5xl font-bold mb-6 text-gray-900">Star Gold Complete Car Care Kit</h2>
               <p className="text-xl mb-8 text-gray-600 leading-relaxed">
-                Get all three premium products plus a professional detailing brush. Save 25% compared to buying
-                separately and transform your car care routine!
+                Get all premium Star Gold products plus professional tools. Save रु251 compared to buying
+                separately and transform your car care routine with authentic Nepal products!
               </p>
 
-              <div className="space-y-4 mb-8">
+                  <div className="space-y-4 mb-8">
                 <div className="flex items-center gap-3 text-lg text-gray-700">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Premium Car Shiner ($29.99)</span>
+                  <span>Nodi Shine Dashboard Shiner (रु599)</span>
                 </div>
                 <div className="flex items-center gap-3 text-lg text-gray-700">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Ceramic Coating Pro ($89.99)</span>
+                  <span>Star Gold Complete Car Care (रु1,899)</span>
                 </div>
                 <div className="flex items-center gap-3 text-lg text-gray-700">
                   <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-                  <span>Deep Clean Formula ($24.99)</span>
+                  <span>Nodi Shine Stain Remover (रु499)</span>
                 </div>
                 <div className="flex items-center gap-3 text-lg text-gray-700">
                   <div className="w-2 h-2 bg-yellow-400 rounded-full"></div>
@@ -137,9 +146,9 @@ export default function HomePage() {
               </div>
 
               <div className="flex items-center gap-4 mb-8">
-                <div className="text-4xl font-bold text-gray-900">$129.99</div>
-                <div className="text-2xl text-gray-500 line-through">$174.97</div>
-                <Badge className="bg-yellow-100 text-yellow-800 border border-yellow-200 text-lg px-3 py-1 font-bold">Save $44.98</Badge>
+                <div className="text-4xl font-bold text-gray-900">रु2,499</div>
+                <div className="text-2xl text-gray-500 line-through">रु2,750</div>
+                <Badge className="bg-yellow-100 text-yellow-800 border border-yellow-200 text-lg px-3 py-1 font-bold">Save रु251</Badge>
               </div>
 
               <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 border border-blue-200 px-8 py-4 text-lg font-semibold shadow-lg transform hover:scale-105 transition-all">
@@ -150,13 +159,13 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=400&width=500"
+                  src="/products/combo3.jpg"
                   alt="Car care combo package"
-                  width={500}
+                  width={400}
                   height={400}
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-4 right-4 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+                <div className="absolute top-4 right-10 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
                   LIMITED TIME!
                 </div>
               </div>
@@ -185,17 +194,28 @@ export default function HomePage() {
                       src={product.image || "/placeholder.svg"} 
                       alt={product.name} 
                       fill 
-                      className="object-cover group-hover:scale-110 transition-transform duration-300" 
+                      className="object-contain group-hover:scale-110 transition-transform duration-300" 
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                   </div>
                   <CardContent className="p-6 bg-gradient-to-br from-white to-gray-50">
-                    <h3 className="text-xl font-bold text-gray-900 mb-3 group-hover:text-blue-600 transition-colors">{product.name}</h3>
-                    <div className="flex items-center justify-between">
-                      <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">${product.price}</span>
-                      <Button size="sm" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg">
-                        View Details
-                      </Button>
+                    <div className="space-y-3">
+                      <h3 className="text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">{product.name}</h3>
+                      <p className="text-sm text-gray-600 line-clamp-2">{product.description}</p>
+                      <div className="flex items-center gap-2 mb-2">
+                        <div className="flex">
+                          {[...Array(5)].map((_, i) => (
+                            <Star key={i} className={`w-4 h-4 ${i < Math.floor(product.rating) ? 'fill-yellow-400 text-yellow-400' : 'text-gray-300'}`} />
+                          ))}
+                        </div>
+                        <span className="text-sm text-gray-500">({product.reviews})</span>
+                      </div>
+                      <div className="flex items-center justify-between">
+                        <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">रु{product.price.toLocaleString()}</span>
+                        <Button size="sm" className="bg-gradient-to-r from-blue-500 to-indigo-600 hover:from-blue-600 hover:to-indigo-700 text-white shadow-lg">
+                          View Details
+                        </Button>
+                      </div>
                     </div>
                   </CardContent>
                 </Card>

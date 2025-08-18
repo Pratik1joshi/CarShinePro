@@ -15,12 +15,12 @@ import { useAuth } from "@/contexts/auth-context"
 const staticProducts = [
   {
     id: "550e8400-e29b-41d4-a716-446655440001",
-    name: "Premium Car Shiner",
+    name: "Nodi Shine Dashboard Shiner",
     description:
-      "Professional grade car shiner that gives your vehicle a brilliant, long-lasting shine. Perfect for all paint types.",
-    price: 29.99,
+      "Professional dashboard and interior shiner that gives your car's dashboard a brilliant, long-lasting shine. Protects against UV damage and dust accumulation.",
+    price: 599,
     originalPrice: null,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/products/nodi-shine-dashboard.png",
     category: "shiner",
     rating: 4.8,
     reviews: 124,
@@ -28,25 +28,25 @@ const staticProducts = [
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440002",
-    name: "Ceramic Coating Pro",
+    name: "Nodi Shine Waterless Auto Guard",
     description:
-      "Advanced ceramic coating that provides ultimate protection against scratches, UV rays, and environmental damage.",
-    price: 89.99,
+      "Advanced waterless car wash and protection spray. Cleans, shines, and protects your vehicle's paint without water. Perfect for quick touch-ups and regular maintenance.",
+    price: 799,
     originalPrice: null,
-    image: "/placeholder.svg?height=300&width=300",
-    category: "coating",
+    image: "/products/nodi-shine-waterless3.png",
+    category: "spray",
     rating: 4.9,
     reviews: 89,
     inStock: true,
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440003",
-    name: "Deep Clean Formula",
+    name: "Nodi Shine Stain Remover",
     description:
-      "Powerful yet gentle cleaner that removes dirt, grime, and contaminants without damaging your car's finish.",
-    price: 24.99,
+      "Powerful stain remover that effectively removes stubborn stains, dirt, and grime from car interiors and exteriors. Safe for all surfaces including fabric, leather, and vinyl.",
+    price: 499,
     originalPrice: null,
-    image: "/placeholder.svg?height=300&width=300",
+    image: "/products/nodi-shine-remover-3.png",
     category: "cleaner",
     rating: 4.7,
     reviews: 156,
@@ -54,18 +54,44 @@ const staticProducts = [
   },
   {
     id: "550e8400-e29b-41d4-a716-446655440004",
-    name: "Ultimate Car Care Combo",
+    name: "Star Gold Complete Car Care Kit",
     description:
-      "Complete car care package including Premium Shiner, Ceramic Coating, Deep Cleaner, and a professional detailing brush.",
-    price: 129.99,
-    originalPrice: 174.97,
-    image: "/placeholder.svg?height=300&width=300",
+      "Complete professional car care package including Dashboard & Vinyl Leather Shiner, Body Glass Cleaner, and Stain Remover. Everything you need for comprehensive car detailing.",
+    price: 2499,
+    originalPrice: 2750,
+    image: "/products/combo5.png",
     category: "combo",
     rating: 4.9,
     reviews: 67,
     inStock: true,
     isCombo: true,
   },
+  // {
+  //   id: "550e8400-e29b-41d4-a716-446655440005",
+  //   name: "Star Gold Dashboard & Vinyl Leather Shiner",
+  //   description:
+  //     "Premium dashboard and leather care product that cleans, shines, and protects all interior surfaces. Ideal for dashboards, vinyl, and leather upholstery.",
+  //   price: 649,
+  //   originalPrice: null,
+  //   image: "/products/star-gold-dashboard.jpg",
+  //   category: "shiner",
+  //   rating: 4.8,
+  //   reviews: 98,
+  //   inStock: true,
+  // },
+  // {
+  //   id: "550e8400-e29b-41d4-a716-446655440006",
+  //   name: "Star Gold Body Glass Cleaner",
+  //   description:
+  //     "Professional glass and body cleaner that provides crystal clear finish. Removes water spots, dirt, and grime from glass, mirrors, and painted surfaces.",
+  //   price: 549,
+  //   originalPrice: null,
+  //   image: "/products/star-gold-glass.jpg",
+  //   category: "spray",
+  //   rating: 4.6,
+  //   reviews: 73,
+  //   inStock: true,
+  // },
 ]
 
 export default function ProductsPage() {
@@ -112,9 +138,9 @@ export default function ProductsPage() {
       <section className="bg-white py-12">
         <div className="container mx-auto px-6">
           <div className="text-center">
-            <h1 className="text-3xl font-bold text-gray-900 mb-4">Our Products</h1>
+            <h1 className="text-3xl font-bold text-gray-900 mb-4">Our Premium Car Care Products</h1>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Professional-grade car care products designed to give your vehicle the ultimate shine and protection.
+              Authentic Nodi Shine and Star Gold products designed specifically for Nepal's climate. Professional-grade car care for brilliant shine and lasting protection.
             </p>
           </div>
         </div>
@@ -148,7 +174,7 @@ export default function ProductsPage() {
                         src={product.image || "/placeholder.svg"}
                         alt={product.name}
                         fill
-                        className="object-cover"
+                        className="object-contain"
                       />
                     </div>
                     {product.isCombo && (
@@ -156,7 +182,7 @@ export default function ProductsPage() {
                     )}
                     {product.originalPrice && (
                       <Badge className="absolute top-3 right-3 bg-green-500 text-white text-xs">
-                        SAVE NPR {(product.originalPrice - product.price).toFixed(2)}
+                        SAVE रु{(product.originalPrice - product.price).toLocaleString()}
                       </Badge>
                     )}
                   </div>
@@ -183,9 +209,9 @@ export default function ProductsPage() {
                       </div>
 
                       <div className="flex items-center gap-2">
-                        <span className="text-xl font-bold text-blue-600">NPR {product.price}</span>
+                        <span className="text-xl font-bold text-blue-600">रु{product.price.toLocaleString()}</span>
                         {product.originalPrice && (
-                          <span className="text-sm text-gray-400 line-through">NPR {product.originalPrice}</span>
+                          <span className="text-sm text-gray-400 line-through">रु{product.originalPrice.toLocaleString()}</span>
                         )}
                       </div>
 
@@ -221,13 +247,19 @@ export default function ProductsPage() {
       {/* CTA Section */}
       <section className="py-12 bg-blue-600 text-white">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-2xl font-bold mb-4">Need Help Choosing?</h2>
+          <h2 className="text-2xl font-bold mb-4">Need Help Choosing the Right Product?</h2>
           <p className="text-lg mb-6 text-blue-100">
-            Our car care experts are here to help you find the perfect products for your vehicle.
+            Our Nepal car care experts are here to help you find the perfect products for your vehicle's needs.
           </p>
-          <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
-            Contact Our Experts
-          </Button>
+          <a 
+            href="https://wa.me/9779705387432" 
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100">
+              Contact Our Nepal Experts
+            </Button>
+          </a>
         </div>
       </section>
     </div>
