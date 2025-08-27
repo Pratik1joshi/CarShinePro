@@ -23,7 +23,7 @@ export default function ComboPage() {
   const comboItems = [
     {
       name: "Nodi Shine Dashboard Shiner",
-      originalPrice: 599,
+      originalPrice: 900,
       description: "Professional dashboard and interior shiner with UV protection",
       image: "/products/nodi-shine-dashboard.png",
     },
@@ -48,7 +48,7 @@ export default function ComboPage() {
     },
   ]
 
-  const totalOriginalPrice = 2800 // Updated total: 599 + 799 + 499 = 1897
+  const totalOriginalPrice = 2198 // Updated total: 900 + 799 + 499 = 2198
   const comboPrice = 2499 // Offer price (includes bonus foam)
   const savings = totalOriginalPrice - comboPrice
 

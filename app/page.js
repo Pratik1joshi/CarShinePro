@@ -11,32 +11,32 @@ export default function HomePage() {
       id: 1,
       name: "Nodi Shine Dashboard Shiner",
       description: "Professional dashboard and interior shiner with UV protection",
-      price: 599,
+      price: 900,
       image: "/products/nodi-shine-dashboard.png",
       category: "shiner",
       rating: 4.8,
       reviews: 124
     },
-    {
-      id: 2,
-      name: "Nodi Shine Waterless Auto Guard",
-      description: "Advanced waterless car wash and protection spray",
-      price: 799,
-      image: "/products/nodi-shine-waterless3.png",
-      category: "spray",
-      rating: 4.9,
-      reviews: 89
-    },
-    {
-      id: 3,
-      name: "Nodi Shine Stain Remover",
-      description: "Powerful stain remover for all car surfaces",
-      price: 499,
-      image: "/products/nodi-shine-remover-3.png",
-      category: "cleaner",
-      rating: 4.7,
-      reviews: 156
-    },
+    // {
+    //   id: 2,
+    //   name: "Nodi Shine Waterless Auto Guard",
+    //   description: "Advanced waterless car wash and protection spray",
+    //   price: 799,
+    //   image: "/products/nodi-shine-waterless3.png",
+    //   category: "spray",
+    //   rating: 4.9,
+    //   reviews: 89
+    // },
+    // {
+    //   id: 3,
+    //   name: "Nodi Shine Stain Remover",
+    //   description: "Powerful stain remover for all car surfaces",
+    //   price: 499,
+    //   image: "/products/nodi-shine-remover-3.png",
+    //   category: "cleaner",
+    //   rating: 4.7,
+    //   reviews: 156
+    // },
   ]
 
   return (

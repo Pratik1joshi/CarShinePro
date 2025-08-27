@@ -337,98 +337,26 @@ export default function ProductDetailPage({ params }) {
           </div>
         </div>
 
-        {/* Product Details Tabs */}
+        {/* Product Details */}
         <div className="mt-16">
-          <Tabs defaultValue="description" className="w-full">
-            <TabsList className="grid w-full grid-cols-3">
-              <TabsTrigger value="description">Description</TabsTrigger>
-              <TabsTrigger value="specifications">Specifications</TabsTrigger>
-              <TabsTrigger value="reviews">Reviews</TabsTrigger>
-            </TabsList>
-
-            <TabsContent value="description" className="mt-8">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">Product Description</h3>
-                  <div className="prose max-w-none">
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      Our Premium Car Shiner is the result of years of research and development in automotive care
-                      technology. This professional-grade formula is designed to deliver exceptional results that rival
-                      those achieved by professional detailing services.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed mb-4">
-                      The advanced polymer technology creates a protective barrier that not only enhances the shine but
-                      also provides long-lasting protection against environmental contaminants, UV rays, and everyday
-                      wear and tear.
-                    </p>
-                    <p className="text-gray-600 leading-relaxed">
-                      Whether you're preparing for a car show or simply want to maintain your vehicle's appearance, this
-                      shiner delivers consistent, professional results every time.
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="specifications" className="mt-8">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">Specifications</h3>
-                  <div className="grid md:grid-cols-2 gap-6">
-                    {Object.entries(product.specifications).map(([key, value]) => (
-                      <div key={key} className="flex justify-between py-2 border-b">
-                        <span className="font-medium text-gray-900">{key}:</span>
-                        <span className="text-gray-600">{value}</span>
-                      </div>
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-
-            <TabsContent value="reviews" className="mt-8">
-              <Card>
-                <CardContent className="p-8">
-                  <h3 className="text-2xl font-bold mb-4">Customer Reviews</h3>
-                  <div className="space-y-6">
-                    {/* Sample reviews */}
-                    <div className="border-b pb-6">
-                      <div className="flex items-center gap-4 mb-2">
-                        <div className="flex">
-                          {[...Array(5)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                          ))}
-                        </div>
-                        <span className="font-medium">John D.</span>
-                        <span className="text-gray-500 text-sm">Verified Purchase</span>
-                      </div>
-                      <p className="text-gray-600">
-                        "Absolutely amazing product! My car has never looked better. The shine lasts for weeks and
-                        application is so easy. Highly recommend!"
-                      </p>
-                    </div>
-
-                    <div className="border-b pb-6">
-                      <div className="flex items-center gap-4 mb-2">
-                        <div className="flex">
-                          {[...Array(4)].map((_, i) => (
-                            <Star key={i} className="w-4 h-4 fill-yellow-400 text-yellow-400" />
-                          ))}
-                          <Star className="w-4 h-4 text-gray-300" />
-                        </div>
-                        <span className="font-medium">Sarah M.</span>
-                        <span className="text-gray-500 text-sm">Verified Purchase</span>
-                      </div>
-                      <p className="text-gray-600">
-                        "Great product overall. Easy to use and gives a nice shine. Only reason for 4 stars is the
-                        price, but quality is definitely there."
-                      </p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </TabsContent>
-          </Tabs>
+          <Card>
+            <CardContent className="p-8">
+              <h3 className="text-2xl font-bold mb-4">Product Description</h3>
+              <div className="prose max-w-none">
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  {product.description}
+                </p>
+                <p className="text-gray-600 leading-relaxed mb-4">
+                  This professional-grade formula is designed to deliver exceptional results that rival
+                  those achieved by professional detailing services.
+                </p>
+                <p className="text-gray-600 leading-relaxed">
+                  Whether you're preparing for a special occasion or simply want to maintain your vehicle's appearance, 
+                  this product delivers consistent, professional results every time.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </div>
     </div>
