@@ -30,7 +30,7 @@ function LoginForm() {
   const { signIn, signInWithGoogle, isAdmin } = useAuth()
   const router = useRouter()
   const searchParams = useSearchParams()
-  const redirect = searchParams.get('redirect') || '/'
+  const redirect = '/'
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value })

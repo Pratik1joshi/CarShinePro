@@ -165,7 +165,7 @@ export default function HomePage() {
                   height={400}
                   className="rounded-2xl shadow-2xl transform hover:scale-105 transition-transform duration-300"
                 />
-                <div className="absolute top-4 right-10 bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
+                <div className="absolute top-4 right-10` bg-blue-500 text-white px-4 py-2 rounded-full text-sm font-bold animate-pulse">
                   LIMITED TIME!
                 </div>
               </div>
