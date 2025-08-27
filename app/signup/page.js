@@ -88,14 +88,18 @@ export default function SignupPage() {
       
       if (success) {
         if (success === 'Development Mode: Account created successfully!') {
-          // Custom message for development mode
-          setSuccess("Development Mode: Account created successfully! Redirecting to login...")
+          // Custom message for development mode - redirect to home
+          setSuccess("Development Mode: Account created successfully! Redirecting...")
+          setTimeout(() => {
+            router.push("/")
+          }, 1500)
         } else {
-          setSuccess("Account created successfully! Please check your email to verify your account.")
+          // Production mode - still redirect to home after signup
+          setSuccess("Account created successfully! Redirecting...")
+          setTimeout(() => {
+            router.push("/")
+          }, 1500)
         }
-        setTimeout(() => {
-          router.push("/login")
-        }, 2000)
       } else {
         setError(error || "Sign up failed. Please try again.")
       }
