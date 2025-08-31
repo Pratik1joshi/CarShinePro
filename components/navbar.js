@@ -17,6 +17,10 @@ export default function Navbar() {
     await signOut()
   }
 
+  const closeMobileMenu = () => {
+    setIsMenuOpen(false)
+  }
+
   return (
     <nav className="bg-white/95 backdrop-blur-lg shadow-xl sticky top-0 z-50 border-b border-gray-100">
       <div className="container mx-auto px-6">
@@ -143,26 +147,26 @@ export default function Navbar() {
         {isMenuOpen && (
           <div className="md:hidden py-6 border-t border-gray-100">
             <div className="flex flex-col space-y-4">
-              <Link href="/" className="text-gray-700 hover:text-blue-600 font-semibold py-3 px-4 rounded-lg hover:bg-blue-50 transition-all">
+              <Link href="/" className="text-gray-700 hover:text-blue-600 font-semibold py-3 px-4 rounded-lg hover:bg-blue-50 transition-all" onClick={closeMobileMenu}>
                 Home
               </Link>
-              <Link href="/products" className="text-gray-700 hover:text-blue-600 font-semibold py-3 px-4 rounded-lg hover:bg-blue-50 transition-all">
+              <Link href="/products" className="text-gray-700 hover:text-blue-600 font-semibold py-3 px-4 rounded-lg hover:bg-blue-50 transition-all" onClick={closeMobileMenu}>
                 Products
               </Link>
-              <Link href="/combo" className="text-gray-700 hover:text-blue-600 font-semibold py-3 px-4 rounded-lg hover:bg-blue-50 transition-all">
+              <Link href="/combo" className="text-gray-700 hover:text-blue-600 font-semibold py-3 px-4 rounded-lg hover:bg-blue-50 transition-all" onClick={closeMobileMenu}>
                 Combo Deal
                 <Badge className="ml-2 bg-gradient-to-r from-red-500 to-pink-500 text-white text-xs px-2 py-1">
                   HOT
                 </Badge>
               </Link>
-              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-semibold py-3 px-4 rounded-lg hover:bg-blue-50 transition-all">
+              <Link href="/about" className="text-gray-700 hover:text-blue-600 font-semibold py-3 px-4 rounded-lg hover:bg-blue-50 transition-all" onClick={closeMobileMenu}>
                 About
               </Link>
               <div className="flex flex-col space-y-3 pt-6 border-t border-gray-100">
                 {/* Cart - only show for non-admin users */}
                 {user && !isAdmin && (
                   <Link href="/cart">
-                    <Button variant="ghost" size="sm" className="w-full justify-start hover:bg-gray-50 py-3 px-4 rounded-lg">
+                    <Button variant="ghost" size="sm" className="w-full justify-start hover:bg-gray-50 py-3 px-4 rounded-lg" onClick={closeMobileMenu}>
                       <ShoppingCart className="w-5 h-5 mr-3" />
                       Cart ({itemCount})
                     </Button>
@@ -172,7 +176,7 @@ export default function Navbar() {
                 {/* My Orders - only show for non-admin users */}
                 {user && !isAdmin && (
                   <Link href="/orders">
-                    <Button variant="ghost" size="sm" className="w-full justify-start hover:bg-green-50 py-3 px-4 rounded-lg text-green-600 hover:text-green-700 font-medium">
+                    <Button variant="ghost" size="sm" className="w-full justify-start hover:bg-green-50 py-3 px-4 rounded-lg text-green-600 hover:text-green-700 font-medium" onClick={closeMobileMenu}>
                       <Package className="w-5 h-5 mr-3" />
                       My Orders
                     </Button>
@@ -188,6 +192,7 @@ export default function Navbar() {
                           variant="ghost" 
                           size="sm" 
                           className="w-full justify-start hover:bg-orange-50 py-3 px-4 rounded-lg text-orange-600 hover:text-orange-700 font-medium"
+                          onClick={closeMobileMenu}
                         >
                           <Shield className="w-5 h-5 mr-3" />
                           Admin Panel
@@ -209,7 +214,10 @@ export default function Navbar() {
                     <Button 
                       variant="ghost" 
                       size="sm" 
-                      onClick={handleSignOut}
+                      onClick={() => {
+                        handleSignOut()
+                        closeMobileMenu()
+                      }}
                       className="w-full justify-start hover:bg-red-50 py-3 px-4 rounded-lg text-red-600 hover:text-red-700"
                     >
                       <LogOut className="w-5 h-5 mr-3" />
@@ -219,13 +227,13 @@ export default function Navbar() {
                 ) : (
                   <>
                     <Link href="/login">
-                      <Button variant="ghost" size="sm" className="w-full justify-start hover:bg-gray-50 py-3 px-4 rounded-lg">
+                      <Button variant="ghost" size="sm" className="w-full justify-start hover:bg-gray-50 py-3 px-4 rounded-lg" onClick={closeMobileMenu}>
                         <User className="w-5 h-5 mr-3" />
                         Login
                       </Button>
                     </Link>
                     <Link href="/signup">
-                      <Button size="sm" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 rounded-lg shadow-lg">
+                      <Button size="sm" className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 py-3 rounded-lg shadow-lg" onClick={closeMobileMenu}>
                         Sign Up
                       </Button>
                     </Link>
