@@ -25,7 +25,7 @@ export default function AboutPage() {
     {
       icon: Truck,
       title: "Fast Shipping",
-      description: "Free shipping on orders over रु100 with fast, reliable delivery to your door.",
+      description: "Fast shipping on orders, reliable delivery to your door.",
     },
   ]
 
@@ -120,7 +120,7 @@ export default function AboutPage() {
             </div>
             <div className="relative">
               <Image
-                src="/placeholder.svg?height=400&width=500"
+                src="/aboutimage.jpg"
                 alt="Car detailing process"
                 width={500}
                 height={400}
